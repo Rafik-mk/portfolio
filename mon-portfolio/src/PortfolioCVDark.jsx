@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { dataFr, dataEn } from "./data/Data";
 
 // Import des composants
+import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Formation from "./components/Formation";
@@ -34,34 +35,43 @@ const PortfolioCVDark = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-6 px-4">
-      {/* Bouton pour changer la langue */}
-      <div className="text-center mb-6">
-        <button
-          className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded shadow"
-          onClick={toggleLanguage}
-        >
-          {content.buttonLabel}
-        </button>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
+      {/* Barre de navigation */}
+      <NavBar
+        toggleLanguage={toggleLanguage}
+        currentLabel={content.buttonLabel} 
+      />
 
       {/* Contenu principal */}
-      <div className="max-w-4xl mx-auto space-y-6">
-        {/* Header */}
-        <Header headerData={content.header} />
+      <div className="max-w-4xl mx-auto space-y-6 py-6 px-4">
+        {/* Accueil */}
+        <section id="accueil">
+          <Header headerData={content.header} />
+        </section>
 
         {/* Skills */}
         <Skills skillsData={content.skills} />
 
         {/* Formation */}
-        <Formation
-          formationData={content.formation}
-          openFormation={openFormation}
-          handleToggleFormation={handleToggleFormation}
-        />
+        <section id="formations">
+          <Formation
+            formationData={content.formation}
+            openFormation={openFormation}
+            handleToggleFormation={handleToggleFormation}
+          />
+        </section>
 
         {/* Experience */}
-        <Experience experienceData={content.experience} />
+        <section id="experiences">
+          <Experience experienceData={content.experience} />
+        </section>
+
+        {/* Projets */}
+        <section id="projets" className="p-6 shadow-lg rounded-2xl bg-gray-800 border border-gray-700">
+          <h2 className="text-2xl font-semibold mb-4 text-white">Projets</h2>
+          <p className="text-gray-300">
+          </p>
+        </section>
 
         {/* Languages */}
         <Languages languagesData={content.languages} />
