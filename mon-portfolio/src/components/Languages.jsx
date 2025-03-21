@@ -1,4 +1,4 @@
-// Languages.jsx
+// src/components/Languages.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ const Languages = ({ languagesData }) => {
       <h2 className="text-2xl font-semibold mb-4 text-white">
         {languagesData.title}
       </h2>
-      <ul className="list-disc list-inside text-gray-300">
+      <ul className="list-disc list-inside text-gray-300 space-y-1">
         {languagesData.items.map((langItem, index) => (
           <li key={index}>{langItem}</li>
         ))}

@@ -1,74 +1,89 @@
+// src/data/Data.js
+
 export const dataFr = {
   header: {
     name: "MOKRANI Rafik Mohamed",
-    title: "Apprenti Ingénieur en Systèmes Embarqués",
-    locationAge: "📍 France | 22 ans",
-    contact: "📧 mokranirafik0@gmail.com | 📞 +33 667 204 668",
+    title: "Ingénieur Systèmes Embarqués / Architecte Électronique",
+    locationAge: "📍 France | 24 ans | Permis B",
+    contact: "📧 mokranirafik0@gmail.com | 📞 +33 6 67 20 46 68",
   },
   skills: {
     title: "Compétences",
     items: [
-      "Programmation : C++, C, Python, VHDL, Assembleur",
-      "Logiciels : Quartus II, Code Block, MPLABX, Linux",
-      "Bus de communication : CAN, I2C, UART",
-      "Soft Skills : Travail en équipe, Autonomie, Public Speaking",
+      "C, Rust, Python, VHDL, Assembleur, CCS RTOS, Cypher, Git/Github, Jira, IDEs",
+      "Linux embarqué, Cybersécurité des systèmes embarqués, IoT faible consommation",
+      "Bus de terrain (CAN, I2C, UART), Protocole IP, SOME/IP",
+      "Travail d'équipe, Autonomie",
     ],
   },
   formation: {
-    title: "Formation",
+    title: "Formations",
     list: [
       {
-        year: "2023-2025",
-        institution: "ESIEA, Ivry-sur-Seine",
-        diploma: "Ingénieur en Systèmes Embarqués",
+        year: "09/2023 - 09/2025",
+        institution: "ESIEA, Ivry-sur-Seine, Île-de-France",
+        diploma: "Diplôme Ingénieur Systèmes Embarqués et Autonomes",
         details:
-          "Programme orienté systèmes embarqués, électronique, programmation bas niveau, etc.",
+          "Actuellement apprenti architecte électronique chez Stellantis. Formation spécialisée en architectures électroniques embarquées, SOME/IP, bus CAN, LIN, etc.",
       },
       {
-        year: "2022-2024",
-        institution: "Université Picardie Jules Verne",
-        diploma: "Master Électronique, Énergie Électrique",
+        year: "09/2022 - 2023",
+        institution: "Université Picardie Jules Verne, Amiens, France",
+        diploma:
+          "Master en Électronique, Énergie Électrique et Automatique (mention Robotique et Vision Artificielle)",
         details:
-          "Spécialisation en électronique de puissance, énergies renouvelables, systèmes de contrôle.",
+          "Études approfondies en robotique, vision artificielle, électronique avancée et contrôle des systèmes.",
       },
       {
-        year: "2018-2021",
-        institution: "IGEE Algérie",
-        diploma: "Licence Génie Électrique et Électronique",
+        year: "2021 - 2022",
+        institution: "Université Picardie Jules Verne, Amiens, France",
+        diploma: "Spécialisation en systèmes embarqués",
         details:
-          "Études de base en électricité, électronique, automatisme et instrumentation.",
+          "Approfondissement en programmation bas niveau, développement IoT et cybersécurité des systèmes embarqués.",
+      },
+      {
+        year: "2018 - 2021",
+        institution:
+          "IGEE (Institut national de génie électrique et électronique), Algérie",
+        diploma: "Licence en génie électrique et électronique",
+        details:
+          "Cursus en anglais, bases solides en électronique, automatisme et instrumentation.",
       },
     ],
   },
   experience: {
-    title: "Expérience Professionnelle",
+    title: "Expériences Professionnelles",
     items: [
       {
-        period: "2022 - Présent",
-        role: "Apprenti Ingénieur Systèmes Embarqués",
+        period: "09/2023 - Présent",
+        role: "Apprenti Architecte Électronique",
+        company: "Stellantis",
+        description:
+          "Intégration des besoins fonctionnels sur réseaux embarqués (CAN, LIN, Ethernet). Étude et déploiement de nouvelles fonctionnalités SOME/IP dans la nouvelle architecture STLA Brain. Coordination avec différentes équipes (fonctionnelles, messagerie, développement).",
+      },
+      {
+        period: "10/2022 - 08/2023",
+        role: "Apprenti Ingénieur Systèmes Embarqués E-Bike",
         company: "MFC Groupe Intersport",
         description:
-          "Développement et maintenance de systèmes embarqués pour la logistique et le suivi des produits.",
+          "Tests unitaires, intégration et validation software/hardware embarqués. Intégration des systèmes CAN et interaction avec des fournisseurs étrangers pour le développement de solutions E-Bike.",
       },
       {
-        period: "2021",
-        role: "Technicien Électronicien (Stage)",
-        company: "Sonatrach",
+        period: "2019 - 2021",
+        role: "Membre organisateur d'évènement",
+        company: "INELECTRONICS Student Club, Université de Boumerdes",
         description:
-          "Maintenance électronique et automatisation dans un environnement industriel.",
-      },
-      {
-        period: "2019-2021",
-        role: "Membre organisateur",
-        company: "INELECTRONICS Student Club",
-        description:
-          "Organisation d'événements techniques et gestion de projets étudiants autour de l'électronique.",
+          "Participation à l’organisation de workshops, formations et journées techniques pour les étudiants passionnés d’électronique.",
       },
     ],
   },
   languages: {
     title: "Langues",
-    items: ["Français – Courant", "Anglais – Professionnel", "Arabe – Langue maternelle"],
+    items: [
+      "Anglais : TOEIC 920",
+      "Français : Courant",
+      "Arabe : Langue maternelle",
+    ],
   },
   buttonLabel: "Switcher en Anglais",
 };
@@ -76,42 +91,51 @@ export const dataFr = {
 export const dataEn = {
   header: {
     name: "MOKRANI Rafik Mohamed",
-    title: "Embedded Systems Engineer Apprentice",
-    locationAge: "📍 France | 22 years old",
-    contact: "📧 mokranirafik0@gmail.com | 📞 +33 667 204 668",
+    title: "Embedded Systems Engineer / Electronic Architect",
+    locationAge: "📍 France | 24 years old | Driving license B",
+    contact: "📧 mokranirafik0@gmail.com | 📞 +33 6 67 20 46 68",
   },
   skills: {
     title: "Skills",
     items: [
-      "Programming: C++, C, Python, VHDL, Assembly",
-      "Software: Quartus II, Code Block, MPLABX, Linux",
-      "Communication buses: CAN, I2C, UART",
-      "Soft Skills: Teamwork, Autonomy, Public Speaking",
+      "C, Rust, Python, VHDL, Assembly, CCS RTOS, Cypher, Git/Github, Jira, IDEs",
+      "Embedded Linux, Embedded System Security, Low-power IoT",
+      "Field buses (CAN, I2C, UART), IP protocols, SOME/IP",
+      "Teamwork, Autonomy",
     ],
   },
   formation: {
     title: "Education",
     list: [
       {
-        year: "2023-2025",
-        institution: "ESIEA, Ivry-sur-Seine",
-        diploma: "Embedded Systems Engineering",
+        year: "09/2023 - 09/2025",
+        institution: "ESIEA, Ivry-sur-Seine, Île-de-France",
+        diploma: "Engineer Degree in Embedded and Autonomous Systems",
         details:
-          "Focus on embedded systems, electronics, low-level programming, etc.",
+          "Currently an electronic architect apprentice at Stellantis. Specialized in embedded electronic architectures, SOME/IP, CAN, LIN, etc.",
       },
       {
-        year: "2022-2024",
-        institution: "Université Picardie Jules Verne",
-        diploma: "Master in Electronics, Electrical Energy",
+        year: "09/2022 - 2023",
+        institution: "Université Picardie Jules Verne, Amiens, France",
+        diploma:
+          "Master in Electronics, Electrical Energy and Automation (Robotics and Computer Vision major)",
         details:
-          "Specialization in power electronics, renewable energies, and control systems.",
+          "Advanced studies in robotics, computer vision, electronics, and system control.",
       },
       {
-        year: "2018-2021",
-        institution: "IGEE Algeria",
+        year: "2021 - 2022",
+        institution: "Université Picardie Jules Verne, Amiens, France",
+        diploma: "Specialization in Embedded Systems",
+        details:
+          "In-depth focus on low-level programming, IoT development, and cybersecurity for embedded systems.",
+      },
+      {
+        year: "2018 - 2021",
+        institution:
+          "IGEE (National Institute of Electrical & Electronics Engineering), Algeria",
         diploma: "Bachelor in Electrical & Electronics Engineering",
         details:
-          "Fundamentals of electricity, electronics, automation, and instrumentation.",
+          "English-based curriculum, strong foundations in electronics, automation, and instrumentation.",
       },
     ],
   },
@@ -119,31 +143,35 @@ export const dataEn = {
     title: "Professional Experience",
     items: [
       {
-        period: "2022 - Present",
-        role: "Embedded Systems Engineer Apprentice",
+        period: "09/2023 - Present",
+        role: "Electronic Architect Apprentice",
+        company: "Stellantis",
+        description:
+          "Integrating functional requirements on embedded networks (CAN, LIN, Ethernet). Developing new SOME/IP features for STLA Brain architecture. Coordinating with functional, messaging, and development teams.",
+      },
+      {
+        period: "10/2022 - 08/2023",
+        role: "Embedded Systems Engineer Apprentice (E-Bike)",
         company: "MFC Groupe Intersport",
         description:
-          "Development and maintenance of embedded systems for logistics and product tracking.",
+          "Unit testing, hardware/software integration and validation for embedded systems. Implementing CAN networks and collaborating with foreign suppliers for E-Bike solutions.",
       },
       {
-        period: "2021",
-        role: "Electronics Technician (Intern)",
-        company: "Sonatrach",
+        period: "2019 - 2021",
+        role: "Events Organizing Member",
+        company: "INELECTRONICS Student Club, University of Boumerdes",
         description:
-          "Electronics maintenance and automation in an industrial environment.",
-      },
-      {
-        period: "2019-2021",
-        role: "Organizing Member",
-        company: "INELECTRONICS Student Club",
-        description:
-          "Organized technical events and managed student electronics projects.",
+          "Organized workshops, trainings, and technical days for electronics enthusiasts.",
       },
     ],
   },
   languages: {
     title: "Languages",
-    items: ["French – Fluent", "English – Professional", "Arabic – Native"],
+    items: [
+      "English: TOEIC 920",
+      "French: Fluent",
+      "Arabic: Native",
+    ],
   },
   buttonLabel: "Switch to French",
 };

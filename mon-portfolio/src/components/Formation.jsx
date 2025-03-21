@@ -1,4 +1,4 @@
-// Formation.jsx
+// src/components/Formation.jsx
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,7 +14,7 @@ const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
       <h2 className="text-2xl font-semibold mb-4 text-white">
         {formationData.title}
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         {formationData.list.map((item, index) => {
           const isOpen = openFormation[index];
           return (
@@ -22,12 +22,21 @@ const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
               <motion.div
                 className="cursor-pointer bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow p-4 flex flex-col justify-between"
                 onClick={() => handleToggleFormation(index)}
-                layout // Permet à Framer Motion de gérer l'animation de mise en page
-                initial={{ height: 100 }}
-                animate={{ height: isOpen ? "auto" : 100 }}
+                layout
+                initial={{ height: 110 }}
+                animate={{ height: isOpen ? "auto" : 110 }}
                 transition={{ type: "spring", duration: 0.5 }}
               >
                 <div>
+                  {/* 
+                  {item.institution.includes("ESIEA") && (
+                    <img
+                      src="/images/esiea_logo.png"
+                      alt="Logo ESIEA"
+                      className="w-16 h-auto mb-2"
+                    />
+                  )} 
+                  */}
                   <motion.h3 className="font-bold text-lg" layout>
                     {item.year}
                   </motion.h3>

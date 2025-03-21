@@ -1,4 +1,4 @@
-// Experience.jsx
+// src/components/Experience.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -23,7 +23,7 @@ const Experience = ({ experienceData }) => {
             <p className="font-semibold">
               {exp.period} : {exp.role} - {exp.company}
             </p>
-            <p className="text-gray-300">{exp.description}</p>
+            <p className="text-gray-300 mt-1">{exp.description}</p>
           </div>
         ))}
       </div>
