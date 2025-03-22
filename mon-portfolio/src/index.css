@@ -1,18 +1,337 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* index.css */
+
+/* RESET de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #333;
+  min-height: 100vh;
+  background-color: rgb(237, 249, 254);
+}
+
+/* Conteneur global */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(237, 249, 254);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #000;
+}
+
+.langButton {
+  background-color: #36A9E1;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.langButton:hover {
+  background-color: #151d34 ;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  padding-top: 100px;
+}
+
+.headerPhoto img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 1 1;
+}
+
+.headerText {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.headerName {
+  font-size: 50px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.headerGreeting {
+  font-size: 40px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+  margin-top: 20px;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.headerSub {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* SECTIONS (Compétences, Formation, Expérience, etc.) */
+.section {
+  margin-bottom: 4rem; /* espace entre sections */
+  width: 100%;
+}
+
+/* Pour séparer le contenu en deux moitiés horizontales, 
+   ex: .sectionLeft, .sectionRight qu'on anime différemment */
+.sectionContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  /* si trop serré, on passera en colonne sur mobile */
+}
+
+.sectionContent > div {
+  flex: 1;
+  min-width: 300px; /* pour qu'on ne rapetisse pas trop sur mobile */
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* LISTES */
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ANIMATIONS via Framer Motion (on laisse l'espace libre pour la transition x,y, etc.) */
+
+/* OPTIONNEL : Si tu veux un petit effet hover sur un bloc, par exemple */
+.blockHover:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.9rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  color: #fff;
+}
+
+.social-icon:hover {
+  color: #fff;
+}
+
+.social-icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* TOOLTIP */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+  color: white;
+}
+
+.tooltip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 8px solid rgb(237, 249, 254);
+  border-right: 8px solid rgb(237, 249, 254);
+  border-left: 8px solid rgb(237, 249, 254);
+  border-bottom-color: rgb(237, 249, 254) ;
+  transform: translate(-50%, 100%);
+}
+
+
+/* Afficher le tooltip au hover */
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+
+/* BACKGROUNDS SPÉCIFIQUES PAR RÉSEAU */
+
+.social-icon--linkedin {
+  background-color: #006599;
+}
+.social-icon--linkedin .tooltip,
+.social-icon--linkedin .tooltip::after {
+  background-color: #006599;
+  border-top-color: #006599;
+}
+
+.social-icon--twitter {
+  background-color: #2b97f1;
+}
+.social-icon--twitter .tooltip,
+.social-icon--twitter .tooltip::after {
+  background-color: #2b97f1;
+  border-top-color: #2b97f1;
+}
+
+.social-icon--codepen {
+  background-color: #000000;
+}
+.social-icon--codepen .tooltip,
+.social-icon--codepen .tooltip::after {
+  background-color: #000000;
+  border-top-color: #000000;
+}
+
+.social-icon--facebook {
+  background-color: #3b5a9b;
+}
+.social-icon--facebook .tooltip,
+.social-icon--facebook .tooltip::after {
+  background-color: #3b5a9b;
+  border-top-color: #3b5a9b;
+}
+
+.social-icon--instagram {
+  background-color: #527fa6;
+}
+.social-icon--instagram .tooltip,
+.social-icon--instagram .tooltip::after {
+  background-color: #527fa6;
+  border-top-color: #527fa6;
+}
+
+.social-icon--dribbble {
+  background-color: #ef5a92;
+}
+.social-icon--dribbble .tooltip,
+.social-icon--dribbble .tooltip::after {
+  background-color: #ef5a92;
+  border-top-color: #ef5a92;
+}
+
+.social-icon--github {
+  background-color: #4284c0;
+}
+.social-icon--github .tooltip,
+.social-icon--github .tooltip::after {
+  background-color: #4284c0;
+  border-top-color: #4284c0;
+}
+
+.social-icon--gmail {
+  background-color: #d44638; /* Couleur Gmail (rouge/orange) */
+}
+.social-icon--gmail .tooltip,
+.social-icon--gmail .tooltip::after {
+  background-color: #d44638;
+  border-top-color: #d44638;
+}
+
+.social-icon--phone {
+  background-color: #25d366; /* Vert style WhatsApp/téléphone */
+}
+.social-icon--phone .tooltip,
+.social-icon--phone .tooltip::after {
+  background-color: #25d366;
+  border-top-color: #25d366;
 }

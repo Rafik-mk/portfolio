@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(237, 249, 254);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgb(237, 249, 254);
+  color: rgb(0, 28, 85);
+  display: flex
+;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: 0.25s linear;
 }

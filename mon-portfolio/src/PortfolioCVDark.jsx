@@ -1,31 +1,25 @@
-// src/PortfolioCVDark.jsx
+// src/PortfolioCVLight.jsx
 import React, { useState } from "react";
 import { dataFr, dataEn } from "./data/Data";
-
-// Import des composants
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Formation from "./components/Formation";
 import Experience from "./components/Experience";
 import Languages from "./components/Languages";
+import Contact from "./components/contact_links";
 
-const PortfolioCVDark = () => {
-  // État pour la langue
-  const [language, setLanguage] = useState("fr");
-
-  // État pour l'ouverture des formations (accordéon)
+const PortfolioCVLight = () => {
+  const [language, setLanguage] = useState("en");
+  // 4 formations => on passe un tableau de 4 booleans
   const [openFormation, setOpenFormation] = useState(Array(4).fill(false));
 
-  // Sélection du contenu selon la langue
   const content = language === "fr" ? dataFr : dataEn;
 
-  // Bascule de la langue
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "fr" ? "en" : "fr"));
   };
 
-  // Gestion des ouvertures / fermetures de blocs formation
   const handleToggleFormation = (index) => {
     setOpenFormation((prev) => {
       const newState = [...prev];
@@ -35,52 +29,41 @@ const PortfolioCVDark = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
-      {/* Barre de navigation */}
-      <NavBar
-        toggleLanguage={toggleLanguage}
-        currentLabel={content.buttonLabel}
+    <div>
+      <NavBar toggleLanguage={toggleLanguage} currentLabel={content.buttonLabel} />
+
+      {/* HEADER */}
+      <div id="main" style={{ paddingTop: "40px", marginTop: "-40px" }}></div>
+      <Header headerData={content.header} />
+
+      
+      <Contact contact_links={content.formation} />
+
+      <div id="formations" style={{ paddingTop: "80px", marginTop: "-80px" }}></div>
+      <Formation
+        formationData={content.formation}
+        openFormation={openFormation}
+        handleToggleFormation={handleToggleFormation}
       />
 
-      {/* Contenu principal */}
-      <div className="max-w-4xl mx-auto space-y-6 py-6 px-4">
-        {/* Accueil */}
-        <section id="accueil">
-          <Header headerData={content.header} />
-        </section>
+      <div id="experiences" style={{ paddingTop: "80px", marginTop: "-80px" }}></div>
+      <Experience experienceData={content.experience} />
 
-        {/* Compétences */}
-        <Skills skillsData={content.skills} />
+      {/* SECTIONS */}
+      <Skills skillsData={content.skills} />
 
-        {/* Formations */}
-        <section id="formations">
-          <Formation
-            formationData={content.formation}
-            openFormation={openFormation}
-            handleToggleFormation={handleToggleFormation}
-          />
-        </section>
+      <div id="projets" style={{ paddingTop: "80px", marginTop: "-80px" }}></div>
+      {/* Projets (si besoin) 
+      <section id="projets" className="section container">
+        <h2>Projets</h2>
+        <p>
+          
+        </p>
+      </section>*/}
 
-        {/* Expériences */}
-        <section id="experiences">
-          <Experience experienceData={content.experience} />
-        </section>
-
-        {/* Projets (à compléter) */}
-        <section
-          id="projets"
-          className="p-6 shadow-lg rounded-2xl bg-gray-800 border border-gray-700"
-        >
-          <h2 className="text-2xl font-semibold mb-4 text-white">Projets</h2>
-          <p className="text-gray-300">
-          </p>
-        </section>
-
-        {/* Langues */}
-        <Languages languagesData={content.languages} />
-      </div>
+      <Languages languagesData={content.languages} />
     </div>
   );
 };
 
-export default PortfolioCVDark;
+export default PortfolioCVLight;

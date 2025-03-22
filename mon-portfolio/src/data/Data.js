@@ -2,10 +2,10 @@
 
 export const dataFr = {
   header: {
-    name: "MOKRANI Rafik Mohamed",
-    title: "Ingénieur Systèmes Embarqués / Architecte Électronique",
-    locationAge: "📍 France | 24 ans | Permis B",
-    contact: "📧 mokranirafik0@gmail.com | 📞 +33 6 67 20 46 68",
+    name: "MOKRANI Rafik",
+    title: "Ingénieur Systèmes Embarqués",
+    greeting: "Bonjour !",
+    info: "Actuellement apprenti architecte électronique chez Stellantis, je termine ma formation en systèmes embarqués à l'ESIEA. Passionné par l'électronique et le développement embarqué, je recherche un CDI à partir de septembre 2025 pour relever de nouveaux défis."
   },
   skills: {
     title: "Compétences",
@@ -24,7 +24,7 @@ export const dataFr = {
         institution: "ESIEA, Ivry-sur-Seine, Île-de-France",
         diploma: "Diplôme Ingénieur Systèmes Embarqués et Autonomes",
         details:
-          "Actuellement apprenti architecte électronique chez Stellantis. Formation spécialisée en architectures électroniques embarquées, SOME/IP, bus CAN, LIN, etc.",
+          "En apprentissage chez Stellantis.",
       },
       {
         year: "09/2022 - 2023",
@@ -32,7 +32,7 @@ export const dataFr = {
         diploma:
           "Master en Électronique, Énergie Électrique et Automatique (mention Robotique et Vision Artificielle)",
         details:
-          "Études approfondies en robotique, vision artificielle, électronique avancée et contrôle des systèmes.",
+          "Master en apprentissage robotique, vision artificielle, électronique avancée et contrôle des systèmes.",
       },
       {
         year: "2021 - 2022",
@@ -90,10 +90,10 @@ export const dataFr = {
 
 export const dataEn = {
   header: {
-    name: "MOKRANI Rafik Mohamed",
-    title: "Embedded Systems Engineer / Electronic Architect",
-    locationAge: "📍 France | 24 years old | Driving license B",
-    contact: "📧 mokranirafik0@gmail.com | 📞 +33 6 67 20 46 68",
+    name: "MOKRANI Rafik",
+    title: "Embedded Systems Engineer",
+    greeting: "Hi !",
+    info: "Currently an electronic architect apprentice at Stellantis, I am completing my Embedded Systems Engineering studies at ESIEA. Passionate about electronics and embedded development, I am looking for a full-time position starting in September 2025 to tackle new challenges."
   },
   skills: {
     title: "Skills",
