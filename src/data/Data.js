@@ -5,13 +5,13 @@ export const dataFr = {
     name: "MOKRANI Rafik",
     title: "Ingénieur Systèmes Embarqués",
     greeting: "Bonjour !",
-    info: "Actuellement apprenti architecte électronique chez Stellantis, je termine ma formation en systèmes embarqués à l'ESIEA. Passionné par l'électronique et le développement embarqué, je recherche un CDI à partir de septembre 2025 pour relever de nouveaux défis."
+    info: "Actuellement apprenti architecte électronique chez Stellantis, je termine ma formation à l'ESIEA. Passionné par l'électronique et le développement embarqué, je recherche un CDI à partir de septembre 2025."
   },
   skills: {
     title: "Compétences",
     items: [
       "C, Rust, Python, VHDL, Assembleur, CCS RTOS, Cypher, Git/Github, Jira, IDEs",
-      "Linux embarqué, Cybersécurité des systèmes embarqués, IoT faible consommation",
+      "Linux embarqué, Cybersécurité, IoT basse consommation",
       "Bus de terrain (CAN, I2C, UART), Protocole IP, SOME/IP",
       "Travail d'équipe, Autonomie",
     ],
@@ -23,31 +23,29 @@ export const dataFr = {
         year: "09/2023 - 09/2025",
         institution: "ESIEA, Ivry-sur-Seine, Île-de-France",
         diploma: "Diplôme Ingénieur Systèmes Embarqués et Autonomes",
-        details:
-          "En apprentissage chez Stellantis.",
+        details: "En apprentissage chez Stellantis.\n\nCourses:\n- Edge IA (Machine Learning sur systèmes embarqués)\n- Secure programming en Rust\n- GPU (CUDA)\n- IoT basse consommation (ULP)\n- Embedded Linux\n- Virtualisation\n- HDL (VHDL, FPGA)\n",
+        logo: "images/esiea_logo.png"
       },
       {
         year: "09/2022 - 2023",
         institution: "Université Picardie Jules Verne, Amiens, France",
-        diploma:
-          "Master en Électronique, Énergie Électrique et Automatique (mention Robotique et Vision Artificielle)",
-        details:
-          "Master en apprentissage robotique, vision artificielle, électronique avancée et contrôle des systèmes.",
+        diploma: "Master Électronique, Énergie Électrique et Automatique",
+        details: "Robotique, vision artificielle, DSP, OOP C++/UML, field buses (CAN, I2C, UART), RTOS.",
+        logo: "images/upjv_logo.png"
       },
       {
         year: "2021 - 2022",
         institution: "Université Picardie Jules Verne, Amiens, France",
         diploma: "Spécialisation en systèmes embarqués",
-        details:
-          "Approfondissement en programmation bas niveau, développement IoT et cybersécurité des systèmes embarqués.",
+        details: "Projet de fin d’études: MPPT battery charger sur DSPIC.\nÉtudes: microcontrôleurs, temps réel, PCB, électronique de puissance.",
+        logo: "images/upjv_logo2.png"
       },
       {
         year: "2018 - 2021",
-        institution:
-          "IGEE (Institut national de génie électrique et électronique), Algérie",
+        institution: "IGEE (ex-INELEC), Algérie",
         diploma: "Licence en génie électrique et électronique",
-        details:
-          "Cursus en anglais, bases solides en électronique, automatisme et instrumentation.",
+        details: "Cursus en anglais. Projet final: distributeur automatique de nourriture (Arduino). Machines électriques, C, assembleur Z80, FPGA (DE2).",
+        logo: "images/igee_logo.png"
       },
     ],
   },
@@ -56,24 +54,32 @@ export const dataFr = {
     items: [
       {
         period: "09/2023 - Présent",
-        role: "Apprenti Architecte Électronique",
+        role: "Apprenti architecte électronique",
         company: "Stellantis",
         description:
-          "Intégration des besoins fonctionnels sur réseaux embarqués (CAN, LIN, Ethernet). Étude et déploiement de nouvelles fonctionnalités SOME/IP dans la nouvelle architecture STLA Brain. Coordination avec différentes équipes (fonctionnelles, messagerie, développement).",
+          "• Intégration des besoins fonctionnels sur les réseaux embarqués (CAN, LIN, Ethernet) et allocation des signaux et fonctions.\n" +
+          "• Étude et intégration de nouvelles fonctionnalités dans les architectures.\n" +
+          "• Collaboration avec différentes équipes (fonctionnelles, messagerie, développement).\n" +
+          "• Développement d’une fonction facilitant la gestion centralisée SOME/IP dans STLA Brain.",
+        logo: "images/stellantis_logo.png"
       },
       {
         period: "10/2022 - 08/2023",
-        role: "Apprenti Ingénieur Systèmes Embarqués E-Bike",
+        role: "Apprenti ingénieur systèmes embarqués E-Bike",
         company: "MFC Groupe Intersport",
         description:
-          "Tests unitaires, intégration et validation software/hardware embarqués. Intégration des systèmes CAN et interaction avec des fournisseurs étrangers pour le développement de solutions E-Bike.",
+          "• Tests unitaires, intégration et validation hardware/software.\n" +
+          "• Intégration CAN.\n" +
+          "• Interaction avec fournisseurs étrangers.",
+        logo: "images/intersport_logo.png"
       },
       {
         period: "2019 - 2021",
         role: "Membre organisateur d'évènement",
         company: "INELECTRONICS Student Club, Université de Boumerdes",
         description:
-          "Participation à l’organisation de workshops, formations et journées techniques pour les étudiants passionnés d’électronique.",
+          "Organisation de workshops, formations et journées techniques pour les étudiants.",
+        logo: "images/inelectronics_logo.png"
       },
     ],
   },
@@ -85,21 +91,29 @@ export const dataFr = {
       "Arabe : Langue maternelle",
     ],
   },
-  buttonLabel: "Switcher en Anglais",
+  contact: {
+    title: "Contact",
+    phoneLabel: "Téléphone",
+    phoneNumber: "+33 6 67 20 46 68",
+    emailLabel: "Email",
+    emailValue: "mokranirafik0@gmail.com",
+    message: "N'hésitez pas à me contacter pour toute information ou opportunité !"
+  },
+  buttonLabel: "Switch to English",
 };
 
 export const dataEn = {
   header: {
     name: "MOKRANI Rafik",
     title: "Embedded Systems Engineer",
-    greeting: "Hi !",
-    info: "Currently an electronic architect apprentice at Stellantis, I am completing my Embedded Systems Engineering studies at ESIEA. Passionate about electronics and embedded development, I am looking for a full-time position starting in September 2025 to tackle new challenges."
+    greeting: "Hello !",
+    info: "Currently an Electronic Architect apprentice at Stellantis, finishing my studies at ESIEA. Passionate about electronics and embedded development, I'm looking for a full-time position from September 2025."
   },
   skills: {
     title: "Skills",
     items: [
       "C, Rust, Python, VHDL, Assembly, CCS RTOS, Cypher, Git/Github, Jira, IDEs",
-      "Embedded Linux, Embedded System Security, Low-power IoT",
+      "Embedded Linux, System Security, Low-power IoT",
       "Field buses (CAN, I2C, UART), IP protocols, SOME/IP",
       "Teamwork, Autonomy",
     ],
@@ -109,33 +123,31 @@ export const dataEn = {
     list: [
       {
         year: "09/2023 - 09/2025",
-        institution: "ESIEA, Ivry-sur-Seine, Île-de-France",
+        institution: "ESIEA, Ivry-sur-Seine, France",
         diploma: "Engineer Degree in Embedded and Autonomous Systems",
-        details:
-          "Currently an electronic architect apprentice at Stellantis. Specialized in embedded electronic architectures, SOME/IP, CAN, LIN, etc.",
+        details: "Apprenticeship at Stellantis.\n\nCourses:\n- Edge AI\n- Secure programming in Rust\n- GPU with CUDA\n- Low-power IoT\n- Embedded Linux\n- Virtualization\n- HDL (VHDL, FPGA)\n",
+        logo: "../images/esiea_logo.png"
       },
       {
         year: "09/2022 - 2023",
         institution: "Université Picardie Jules Verne, Amiens, France",
-        diploma:
-          "Master in Electronics, Electrical Energy and Automation (Robotics and Computer Vision major)",
-        details:
-          "Advanced studies in robotics, computer vision, electronics, and system control.",
+        diploma: "Master in Electronics, Electrical Energy, Automation",
+        details: "Robotics, computer vision, DSP, OOP C++/UML, CAN, I2C, UART, RTOS.",
+        logo: "../images/upjv_logo.png"
       },
       {
         year: "2021 - 2022",
         institution: "Université Picardie Jules Verne, Amiens, France",
         diploma: "Specialization in Embedded Systems",
-        details:
-          "In-depth focus on low-level programming, IoT development, and cybersecurity for embedded systems.",
+        details: "Final project: MPPT battery charger on DSPIC.\nMicrocontrollers, real-time OS, PCB, power electronics.",
+        logo: "../images/upjv_logo.png"
       },
       {
         year: "2018 - 2021",
-        institution:
-          "IGEE (National Institute of Electrical & Electronics Engineering), Algeria",
+        institution: "IGEE (ex-INELEC), Algeria",
         diploma: "Bachelor in Electrical & Electronics Engineering",
-        details:
-          "English-based curriculum, strong foundations in electronics, automation, and instrumentation.",
+        details: "English-based. Final project: automatic pet feeder (Arduino). Electrical machines, C, Z80 assembly, FPGA (DE2).",
+        logo: "../images/igee_logo.png"
       },
     ],
   },
@@ -147,21 +159,29 @@ export const dataEn = {
         role: "Electronic Architect Apprentice",
         company: "Stellantis",
         description:
-          "Integrating functional requirements on embedded networks (CAN, LIN, Ethernet). Developing new SOME/IP features for STLA Brain architecture. Coordinating with functional, messaging, and development teams.",
+          "• Integrating functional requirements (CAN, LIN, Ethernet) and signal allocation.\n" +
+          "• Developing new functionalities in electronic architectures.\n" +
+          "• Collaborating with different teams (functional, messaging, dev).\n" +
+          "• Centralized SOME/IP feature for STLA Brain.",
+        logo: "../images/stellantis_logo.png"
       },
       {
         period: "10/2022 - 08/2023",
         role: "Embedded Systems Engineer Apprentice (E-Bike)",
         company: "MFC Groupe Intersport",
         description:
-          "Unit testing, hardware/software integration and validation for embedded systems. Implementing CAN networks and collaborating with foreign suppliers for E-Bike solutions.",
+          "• Unit tests, hardware/software validation.\n" +
+          "• CAN integration.\n" +
+          "• Collaboration with foreign suppliers.",
+        logo: "../images/intersport_logo.png"
       },
       {
         period: "2019 - 2021",
-        role: "Events Organizing Member",
+        role: "Organizing Member",
         company: "INELECTRONICS Student Club, University of Boumerdes",
         description:
-          "Organized workshops, trainings, and technical days for electronics enthusiasts.",
+          "Workshops, trainings, technical events for students.",
+        logo: "../images/inelectronics_logo.png"
       },
     ],
   },
@@ -173,5 +193,13 @@ export const dataEn = {
       "Arabic: Native",
     ],
   },
-  buttonLabel: "Switch to French",
+  contact: {
+    title: "Contact",
+    phoneLabel: "Phone",
+    phoneNumber: "+33 6 67 20 46 68",
+    emailLabel: "Email",
+    emailValue: "mokranirafik0@gmail.com",
+    message: "Feel free to reach out for any info or opportunity!"
+  },
+  buttonLabel: "Switcher en Français",
 };
