@@ -2,7 +2,7 @@
   "name": "mon-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Rafik-mk.github.io/mon-portfolio",
+  "homepage": "https://rafik-mk.github.io/portfolio/", 
   "dependencies": {
     "cra-template": "1.2.0",
     "framer-motion": "^12.0.6",
