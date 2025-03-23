@@ -8,6 +8,7 @@ import Formation from "./components/Formation";
 import Experience from "./components/Experience";
 import Languages from "./components/Languages";
 import Contact from "./components/contact_links";
+import ContactInfo from "./components/Contact.jsx"
 
 const PortfolioCVLight = () => {
   const [language, setLanguage] = useState("en");
@@ -37,7 +38,7 @@ const PortfolioCVLight = () => {
       <Header headerData={content.header} />
 
       
-      <Contact contact_links={content.formation} />
+      <Contact contact_links={content.contact} />
 
       <div id="formations" style={{ paddingTop: "80px", marginTop: "-80px" }}></div>
       <Formation
@@ -62,6 +63,9 @@ const PortfolioCVLight = () => {
       </section>*/}
 
       <Languages languagesData={content.languages} />
+      
+      <div id="contact" style={{ paddingTop: "80px", marginTop: "-80px" }}></div>
+      <ContactInfo contactData={content.contact} />
     </div>
   );
 };
