@@ -1,11 +1,11 @@
 // src/components/Formation.jsx
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import arrowIcon from "../images/arrowIcon.png"; 
 
 const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
   return (
     <motion.section
-      
       className="section container scroll-mt-[200px]"
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -23,7 +23,10 @@ const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
                 marginBottom: "1rem",
                 borderBottom: "1px solid #ddd",
                 paddingBottom: "0.5rem",
-                cursor: "pointer"
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem"
               }}
               onClick={() => handleToggleFormation(index)}
               layout
@@ -31,7 +34,28 @@ const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
               animate={{ height: isOpen ? "auto" : 70 }}
               transition={{ type: "spring", duration: 0.5 }}
             >
-              <div>
+              {/* Flèche */}
+              <img
+                src={arrowIcon}
+                alt="arrow"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.3s"
+                }}
+              />
+
+              {/* Logo de l'école */}
+              {item.logo && (
+                <img
+                  src={item.logo}
+                  alt="logo"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
+              )}
+
+              <div style={{ flex: 1 }}>
                 <motion.h3 style={{ fontWeight: "bold", fontSize: "1.1rem" }}>
                   {item.year}
                 </motion.h3>
@@ -45,12 +69,16 @@ const Formation = ({ formationData, openFormation, handleToggleFormation }) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  style={{ marginTop: "0.5rem", color: "#555" }}
+                  style={{
+                    marginTop: "0.5rem",
+                    color: "#555",
+                    width: "100%",
+                  }}
                 >
                   <p style={{ fontWeight: "bold", marginBottom: "0.3rem" }}>
                     {item.diploma}
                   </p>
-                  <p>{item.details}</p>
+                  <p style={{ whiteSpace: "pre-line" }}>{item.details}</p>
                 </motion.div>
               )}
             </motion.div>
